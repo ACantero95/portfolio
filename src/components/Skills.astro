@@ -1,0 +1,30 @@
+---
+interface Props {
+  skills: string[];
+}
+
+const { skills } = Astro.props;
+---
+
+<section id="skills" class="px-6 py-20">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-black tracking-tight mb-10">
+      Stack & Skills<span class="text-accent">.</span>
+    </h2>
+
+    <div class="flex flex-wrap gap-3">
+      {
+        skills.map((skill, i) => (
+          <span
+            class:list={[
+              "px-5 py-2.5 rounded-full text-sm font-bold border border-line/60 bg-surface text-ink hover:border-accent hover:text-accent hover:shadow-sm transition-all cursor-default animate-fade-up",
+              `delay-${((i % 5) + 1) * 100}`,
+            ]}
+          >
+            {skill}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+</section>

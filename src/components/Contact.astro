@@ -1,0 +1,56 @@
+---
+interface Props {
+  email: string;
+}
+
+const { email } = Astro.props;
+---
+
+<section id="contact" class="px-6 py-28 relative overflow-hidden">
+  <!-- Background decoration -->
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-pop/5 pointer-events-none"
+  >
+  </div>
+  <div
+    class="absolute -bottom-20 -right-20 w-80 h-80 bg-accent/8 rounded-full blur-3xl pointer-events-none"
+  >
+  </div>
+
+  <div class="max-w-3xl mx-auto text-center relative">
+    <h2 class="text-4xl sm:text-5xl font-black tracking-tight animate-fade-up">
+      Construyamos algo<br />
+      <span
+        class="bg-gradient-to-r from-accent to-pop bg-clip-text text-transparent"
+        >potente juntos</span
+      >
+    </h2>
+
+    <p
+      class="mt-6 text-lg text-subtle leading-relaxed max-w-xl mx-auto animate-fade-up delay-100"
+    >
+      Si buscas a alguien que aporte producto, código limpio y foco en
+      resultados — hablemos.
+    </p>
+
+    <div class="mt-10 animate-fade-up delay-200">
+      <a
+        href={`mailto:${email}`}
+        class="group inline-flex items-center gap-3 px-8 py-4 bg-ink text-paper font-bold text-lg rounded-full hover:bg-accent transition-all hover:shadow-glow hover:-translate-y-0.5"
+      >
+        Enviar email
+        <svg
+          class="w-5 h-5 transition-transform group-hover:translate-x-1"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2.5"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg
+        >
+      </a>
+    </div>
+  </div>
+</section>

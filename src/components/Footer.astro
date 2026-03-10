@@ -1,0 +1,37 @@
+---
+interface Props {
+  name: string;
+  linkedin: string;
+  github: string;
+}
+
+const { name, linkedin, github } = Astro.props;
+---
+
+<footer class="border-t border-line/60 px-6 py-10">
+  <div
+    class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted"
+  >
+    <p>
+      © {new Date().getFullYear()}
+      {name}. Hecho con
+      <span class="text-accent font-bold">Astro</span> &
+      <span class="text-accent font-bold">Tailwind</span>.
+    </p>
+    <div class="flex gap-5 font-semibold">
+      <a
+        href={linkedin}
+        target="_blank"
+        rel="noreferrer"
+        class="hover:text-ink transition-colors">LinkedIn</a
+      >
+      <a
+        href={github}
+        target="_blank"
+        rel="noreferrer"
+        class="hover:text-ink transition-colors">GitHub</a
+      >
+      <a href="#" class="hover:text-ink transition-colors">↑ Arriba</a>
+    </div>
+  </div>
+</footer>

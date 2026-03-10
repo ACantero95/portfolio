@@ -1,0 +1,36 @@
+---
+interface Metric {
+  label: string;
+  value: string;
+}
+
+interface Props {
+  metrics: Metric[];
+}
+
+const { metrics } = Astro.props;
+---
+
+<section class="px-6 -mt-4 mb-16">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
+    {
+      metrics.map((item, i) => (
+        <article
+          class:list={[
+            "group relative p-6 rounded-2xl border border-line/60 bg-surface hover:border-accent/40 transition-all hover:shadow-md animate-fade-up",
+            i === 0 && "delay-100",
+            i === 1 && "delay-200",
+            i === 2 && "delay-300",
+          ]}
+        >
+          <p class="text-4xl font-black bg-gradient-to-br from-accent to-pop bg-clip-text text-transparent">
+            {item.value}
+          </p>
+          <p class="mt-1 text-sm font-semibold text-subtle uppercase tracking-wider">
+            {item.label}
+          </p>
+        </article>
+      ))
+    }
+  </div>
+</section>
