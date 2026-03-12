@@ -1,12 +1,19 @@
 ---
+import Icon from "./ui/Icon.astro";
+
+interface Skill {
+  name: string;
+  icon?: string;
+}
+
 interface Props {
-  skills: string[];
+  skills: Skill[];
 }
 
 const { skills } = Astro.props;
 ---
 
-<section id="skills" class="px-6 py-20">
+<section id="skills" class="px-6 py-10">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-3xl sm:text-4xl font-black tracking-tight mb-10">
       Stack & Skills<span class="text-accent">.</span>
@@ -17,11 +24,12 @@ const { skills } = Astro.props;
         skills.map((skill, i) => (
           <span
             class:list={[
-              "px-5 py-2.5 rounded-full text-sm font-bold border border-line/60 bg-surface text-ink hover:border-accent hover:text-accent hover:shadow-sm transition-all cursor-default animate-fade-up",
+              "inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold border border-line/60 bg-surface text-ink transition-all cursor-default",
               `delay-${((i % 5) + 1) * 100}`,
             ]}
           >
-            {skill}
+            {skill.icon && <Icon name={skill.icon} class="size-7" />}
+            {skill.name}
           </span>
         ))
       }

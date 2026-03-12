@@ -1,4 +1,6 @@
 ---
+import Icon from "./ui/Icon.astro";
+
 interface Props {
   name: string;
   linkedin: string;
@@ -13,12 +15,9 @@ const { name, linkedin, github, cv } = Astro.props;
   class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-paper/80 border-b border-line/50"
 >
   <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-    <a
-      href="/"
-      class="text-sm font-extrabold tracking-tight text-ink hover:text-accent transition-colors"
-    >
-      {name}<span class="text-accent">.</span>
-    </a>
+    <p class="text-2xl font-bold">
+      {name}<span class="text-red-500">.</span>
+    </p>
     <div
       class="flex items-center gap-5 text-xs font-semibold uppercase tracking-widest text-subtle"
     >
@@ -34,19 +33,19 @@ const { name, linkedin, github, cv } = Astro.props;
         href={linkedin}
         target="_blank"
         rel="noreferrer"
-        class="hover:text-ink transition-colors">LI</a
+        class="hover:text-ink transition-colors"><Icon name="linkedin" class="size-5" /></a
       >
       <a
         href={github}
         target="_blank"
         rel="noreferrer"
-        class="hover:text-ink transition-colors">GH</a
+        class="hover:text-ink transition-colors"><Icon name="github" class="size-5" /></a
       >
       <a
         href={cv}
-        class="ml-2 px-4 py-2 rounded-full bg-ink text-paper text-xs font-bold hover:bg-accent transition-colors"
+        class="ml-2 p-1 rounded-lg bg-ink text-paper text-xs font-bold hover:bg-accent transition-colors"
       >
-        CV ↓
+        <Icon name="cv" class="size-5" />
       </a>
 
       <button
@@ -59,11 +58,11 @@ const { name, linkedin, github, cv } = Astro.props;
         <span
           class="absolute left-1 top-1/2 -translate-y-1/2 text-[10px] text-subtle"
           aria-hidden="true"
-        >☀</span>
+        ><Icon name="sun" class="size-3.5" /></span>
         <span
           class="absolute right-1 top-1/2 -translate-y-1/2 text-[10px] text-subtle"
           aria-hidden="true"
-        >☾</span>
+        ><Icon name="moon" class="size-3.5" /></span>
         <span
           data-toggle-knob
           class="block h-5 w-5 rounded-full bg-ink shadow-sm transition-transform duration-200"

@@ -23,7 +23,7 @@ const { jobs } = Astro.props;
       {jobs.map((job, i) => (
         <article class:list={["relative group animate-slide-left", i === 1 && "delay-200"]}>
           <!-- Dot -->
-          <div class="absolute -left-5 top-2 w-3 h-3 rounded-full border-2 border-accent bg-paper group-hover:bg-accent transition-colors"></div>
+          <div class="absolute -left-5 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full border-2 ml-1 border-accent bg-paper  transition-colors"></div>
 
           <div class="p-6 rounded-2xl border border-line/60 bg-surface hover:border-accent/30 transition-all hover:shadow-sm">
             <span class="text-xs font-bold text-accent uppercase tracking-widest">{job.period}</span>

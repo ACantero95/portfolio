@@ -1,4 +1,6 @@
 ---
+import Icon from './ui/Icon.astro';
+
 interface Props {
   role: string;
   summary: string;
@@ -85,8 +87,8 @@ const { role, summary, location, email } = Astro.props;
       </a>
     </div>
 
-    <p class="mt-8 text-sm font-semibold text-muted animate-fade-up delay-400">
-      📍 {location}
+    <p class="flex items-center gap-2 mt-8 text-sm font-semibold text-muted animate-fade-up delay-400">
+      <Icon name="pin" class="size-4" /> {location}
     </p>
   </div>
 </section>

@@ -8,13 +8,12 @@ import Projects from "../components/Projects.astro";
 import Skills from "../components/Skills.astro";
 import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
-
 const profile = {
   name: "Alberto Cantero",
-  role: "Lead Web Developer / Frontend Team Lead",
-  location: "Cáceres, España",
+  role: "Senior Web Developer / Frontend Team Lead",
+  location: "Cáceres, España - Remoto",
   summary:
-    "Creo experiencias digitales rápidas, claras y centradas en negocio. Me enfoco en interfaces de alto impacto y en producto end-to-end.",
+    "Lidero equipos frontend y desarrollo productos web escalables. +6 años construyendo soluciones full stack en banca, ciberseguridad e industria — desde arquitectura de componentes hasta decisiones técnicas de producto.",
   email: "hcanteroa@gmail.com",
   linkedin: "https://www.linkedin.com/in/alberto-cantero-a31b65311",
   github: "https://github.com/ACantero95",
@@ -22,61 +21,102 @@ const profile = {
 };
 
 const skills = [
-  "JavaScript / TypeScript",
-  "React / Next.js",
-  "Astro / SEO técnico",
-  "Node.js",
-  "UX / UI",
-  "APIs REST",
-  "Testing",
-  "Performance web",
+  // Lenguajes
+  { name: "JavaScript", icon: "js" },
+  { name: "TypeScript", icon: "ts" },
+  { name: "Java", icon: "java" },
+  { name: "Python", icon: "python" },
+  // Frontend
+  { name: "React", icon: "react" },
+  { name: "Angular", icon: "angular" },
+  { name: "Next.js", icon: "next" },
+  { name: "Astro", icon: "astro" },
+  // Backend
+  { name: "Node.js", icon: "node" },
+  { name: "Express", icon: "express" },
+  { name: "Spring Boot", icon: "spring" },
+  { name: "Django", icon: "django" },
+  // Cloud & DevOps
+  { name: "AWS", icon: "aws" },
+  { name: "Azure", icon: "azure" },
+  { name: "Docker", icon: "docker" },
+  // Datos
+  { name: "PostgreSQL", icon: "postgre" },
+  { name: "MongoDB", icon: "mongo" },
+  // Herramientas
+  { name: "Git", icon: "git" },
+  { name: "GitHub", icon: "github" },
+  { name: "Jira", icon: "jira" },
+  { name: "Githhub Copilot", icon: "copilot" },
+  { name: "Cursor", icon: "cursor" },
 ];
 
 const experience = [
   {
-    period: "2023 — Actualidad",
-    role: "Frontend Developer",
-    company: "Empresa Actual",
+    period: "2024 — Actualidad",
+    role: "Lead Web Developer / Frontend Team Lead",
+    company: "Minery Report",
     detail:
-      "Diseño y desarrollo de productos web orientados a conversión. Mejora de rendimiento y accesibilidad en entornos productivos.",
+      "Liderazgo técnico del área web, coordinando el equipo frontend y definiendo la arquitectura bajo metodologías ágiles. Toma de decisiones tecnológicas, mentoría del equipo y optimización de flujos de desarrollo.",
   },
   {
-    period: "2021 — 2023",
-    role: "Full Stack Developer",
-    company: "Empresa Anterior",
+    period: "2022 — 2024",
+    role: "Desarrollador de Software — IAM (Ciberseguridad)",
+    company: "SIA (Indra)",
     detail:
-      "Implementación de funcionalidades end-to-end y colaboración directa con negocio para acelerar entregas.",
+      "Implementación y gestión de soluciones de Identidad y Control de Acceso para el sector bancario (Banco Santander). Automatización de procesos de seguridad y consolidación de sistemas de acceso.",
+  },
+  {
+    period: "2022",
+    role: "Desarrollador Full Stack",
+    company: "Minery Report",
+    detail:
+      "Desarrollo de APIs en Node.js, frontales con Angular y React, soporte backend con Python y Django. Trabajo con Docker, Azure, MongoDB y AWS.",
+  },
+  {
+    period: "2021 — 2022",
+    role: "Analista / Programador Full Stack",
+    company: "NTT DATA Europe & Latam",
+    detail:
+      "Ciclo de vida completo de desarrollo con Angular, Node.js y Spring Boot. Gestión del equipo de desarrollo y seguimiento técnico con cliente directo.",
+  },
+  {
+    period: "2020 — 2021",
+    role: "Desarrollador Node.js · QA Tester",
+    company: "VIEWNEXT",
+    detail:
+      "Integración de Watson Assistant (IBM) en apps y webs con Node.js y Angular. Anteriormente, diseño y ejecución de pruebas manuales y de rendimiento con ALM y VuGen.",
   },
 ];
 
 const projects = [
   {
-    title: "Proyecto 01",
+    title: "Plataforma Web Minery Report",
     description:
-      "Landing optimizada para captación de leads con mejora de conversión y carga por debajo de 2 segundos.",
-    tech: "Astro · TypeScript · SEO",
+      "Plataforma de reporting con arquitectura frontend escalable, liderada desde cero coordinando equipo y definiendo stack tecnológico.",
+    tech: "React · Node.js · Ágil",
     link: "#",
   },
   {
-    title: "Proyecto 02",
+    title: "Sistema IAM Banca",
     description:
-      "Panel interno para operaciones con dashboards claros y automatización de procesos repetitivos.",
-    tech: "React · Node.js · API",
+      "Solución de gestión de identidad y acceso para Banco Santander: automatización de flujos de seguridad y consolidación de permisos a escala enterprise.",
+    tech: "Java · IAM · Ciberseguridad",
     link: "#",
   },
   {
-    title: "Proyecto 03",
+    title: "Integración Watson Assistant",
     description:
-      "Rediseño de ecommerce con foco en experiencia móvil y arquitectura de componentes escalable.",
-    tech: "Next.js · Design System",
+      "Integración de chatbot IA de IBM en múltiples plataformas web y aplicaciones móviles, incluyendo entrenamiento de modelos conversacionales.",
+    tech: "Node.js · Angular · IBM Cloud",
     link: "#",
   },
 ];
 
 const metrics = [
-  { label: "Años de experiencia", value: "4+" },
-  { label: "Proyectos entregados", value: "25+" },
-  { label: "Sectores", value: "6" },
+  { label: "Años de experiencia", value: "6+" },
+  { label: "Empresas", value: "5" },
+  { label: "Sectores", value: "4" },
 ];
 
 const seo = {
